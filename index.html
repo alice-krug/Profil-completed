@@ -1,65 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Professional Profile</title>
-  <meta name="description" content="A complete profile page built with HTML and CSS following Le Wagon's best practices.">
+  <meta name="description" content="A complete profile page built with HTML and CSS.">
 
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
 
   <style>
-    /* General Design - Body */
+    /* BODY */
     body {
-      background-color: #f7f9fc; /* Light grey background */
+      background-color: #f7f9fc;
       color: #575757;
       font-family: 'Roboto', sans-serif;
       font-size: 17px;
-      font-weight: 300;
       margin: 0;
       line-height: 1.6;
     }
 
-    /* Typography - Headers (Grouping selectors) */
-    h1, h2, h3 {
+    /* CONTAINER */
+    .container {
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    /* HEADINGS */
+    h1, h2 {
       font-family: 'Lora', serif;
       color: #2C3E50;
-      margin-bottom: 20px;
     }
 
-    h1 { font-size: 32px; font-weight: 700;
-
-h2 { font-size: 22px; font-weight: 400; color: #555; }
-
-    /* Layout - The Container */
-    .container {
-      width: 700px;
-      margin: 40px auto; /* Centering technique */
+    h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
     }
 
-    /* Components - White Cards */
+    h2 {
+      font-size: 22px;
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    /* CARDS */
     .card-white {
       background: white;
-      padding: 40px;
-      margin-bottom: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Subtle shadow */
-      border-radius: 4px;
+      padding: 40px 30px;
+      margin-bottom: 25px;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
       text-align: center;
+      transition: transform 0.2s ease;
     }
 
-    /* Profile Image (Class Selector) */
+    .card-white:hover {
+      transform: translateY(-5px);
+    }
+
+    /* PROFILE IMAGE */
     .img-circle {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%; /* Perfect circle */
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
       object-fit: cover;
-      border: 3px solid white;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      display: block;
+      border: 4px solid white;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
 
-    /* Links & Buttons (Pseudo-classes & Transitions) */
+    /* PARAGRAPHS */
+    p {
+      color: #636e72;
+      margin: 15px 0;
+    }
+
+    /* BUTTONS */
+    .btn-blue {
+      background-color: #6B72E1;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 30px;
+      display: inline-block;
+      margin-top: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn-blue:hover {
+      background-color: #4f55c1;
+      transform: scale(1.05);
+    }
+
+    /* SOCIAL ICONS */
+    .list-inline {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+
+    .list-inline li {
+      display: inline-block;
+      margin: 0 12px;
+    }
+
+    .list-inline i {
+      font-size: 32px;
+      color: #cbd5e0;
+      transition: color 0.3s;
+    }
+
+    .list-inline i:hover {
+      color: #6B72E1;
+    }
+
+    /* LINKS */
     a {
       color: #6B72E1;
       text-decoration: none;
@@ -72,16 +133,11 @@ h2 { font-size: 22px; font-weight: 400; color: #555; }
       text-decoration: underline;
     }
 
-    .btn-blue {
-      background-color: #6B72E1;
-  }
-
-/ Responsive Design (Media Queries) /
-    @media (max-width: 760px) {
-      .container { width: 500px; }
-    }
-    @media (max-width: 540px) {
-      .container { width: 90%; }
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .container {
+        width: 90%;
+      }
     }
   </style>
 </head>
@@ -89,37 +145,39 @@ h2 { font-size: 22px; font-weight: 400; color: #555; }
 
   <div class="container">
     
+    <!-- PROFILE CARD -->
     <div class="card-white">
       <h1>Hello, I'm Alice 🪽</h1>
-      <img src="images/profile.jpeg" alt="Alice KRUG"class="img-circle">
+      <img src="images/profile.jpeg" alt="Alice KRUG" class="img-circle">
       <p>
         I'm a student in IESEG. I love <strong>fashion</strong>, 
         <strong>business</strong>, and creating beautiful things.
         Pilates is my favorite hobby! 🌍
       </p>
-      <a href="https://pin.it/2aslWa1rM" target="_blank" class="btn-blue">Visit My Projects about fashion</a>
+      <a href="https://pin.it/2aslWa1rM" target="_blank" class="btn-blue">Visit My Projects</a>
     </div>
 
+    <!-- FASHION CARD -->
     <div class="card-white">
       <h2>Fashion</h2>
-      <p> i passionate about creating someting special and aesthetic.</p>
+      <p>I am passionate about creating something special and aesthetic.</p>
     </div>
 
+    <!-- DEVELOPMENT CARD -->
     <div class="card-white">
       <h2>Development 💻</h2>
       <p>I enjoy bringing designs to life.</p>
     </div>
 
+    <!-- SOCIAL LINKS CARD -->
     <div class="card-white">
-
-<h2>Follow me</h2>
+      <h2>Follow me</h2>
       <ul class="list-inline">
         <li>
-          <a href="https://fontawesome.com/v4/icon/github-square" target="_blank"><i class="fab fa-github-square"></i></a>
+          <a href="https://github.com" target="_blank"><i class="fab fa-github-square"></i></a>
         </li>
         <li>
-<li>
-  <a href="https://www.linkedin.com/in/alice-krug
+          <a href="https://www.linkedin.com/in/alice-krug-78a67a397" target="_blank"><i class="fab fa-linkedin"></i></a>
         </li>
         <li>
           <a href="https://x.com/?lang=fr" target="_blank"><i class="fab fa-twitter-square"></i></a>
